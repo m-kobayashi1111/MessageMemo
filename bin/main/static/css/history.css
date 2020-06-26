@@ -1,0 +1,53 @@
+th{
+	background-color:lightgreen;
+}
+
+
+table,thead,tbody{
+    display: block;
+    overflow-y:auto;
+    
+}
+
+tbody{
+    
+    height:463px;
+}
+
+.ID{
+	width:2em;
+}
+
+.time{
+	width:9em;
+}
+
+.To{
+	width:5em;
+}
+
+.From{
+	width:25em;
+}
+
+.From_c{
+	width:15em;
+}
+
+.From_n{
+	width:10em;
+}
+
+.message{
+	width:20em;
+}
+
+.message_h{
+	width:11.3em;
+}
+
+.sticky_table thead{
+	position: -webkit-sticky;
+  	position: sticky;
+  	top: 0;
+}

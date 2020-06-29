@@ -2,16 +2,32 @@ th{
 	background-color:lightgreen;
 }
 
-
-table,thead,tbody{
-    display: block;
-    overflow-y:auto;
-    
+.sticky_table thead th{
+  /* 縦スクロール時に固定する */
+  position: -webkit-sticky;
+  position: sticky;
+  border:sticky;
+  top: 0;
+  z-index: 5;
+  
 }
 
-tbody{
-    
-    height:463px;
+.sticky_table tbody td{
+  /* 縦スクロール時に固定する */
+  position: -webkit-sticky;
+  position: sticky;
+  top:0;
+  
+   /* 高さが変わらないよう改行させない */
+  white-space: nowrap;
+ 
+}
+
+.sticky_table_wrapper {
+  overflow-y: auto;
+  width: 68em;
+  height:300px;
+  
 }
 
 .ID{
@@ -31,11 +47,11 @@ tbody{
 }
 
 .From_c{
-	width:15em;
+	width:14em;
 }
 
 .From_n{
-	width:10em;
+	width:11em;
 }
 
 .message{
@@ -43,11 +59,5 @@ tbody{
 }
 
 .message_h{
-	width:11.3em;
-}
-
-.sticky_table thead{
-	position: -webkit-sticky;
-  	position: sticky;
-  	top: 0;
+	width:6em;
 }

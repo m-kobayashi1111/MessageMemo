@@ -2,36 +2,38 @@ th{
 	background-color:lightgreen;
 }
 
-.sticky_table thead th{
-  /* 縦スクロール時に固定する */
-  position: -webkit-sticky;
-  position: sticky;
-  border:sticky;
-  top: 0;
-  z-index: 5;
+/*.sticky_table tbody td{
+	border-top:0px none;
+}*/
+
+.sticky_table thead th,tbody td{
+	
+	position: sticky;
+	top: 0;
+	z-index:2;
   
 }
 
 .sticky_table tbody td{
-  /* 縦スクロール時に固定する */
-  position: -webkit-sticky;
-  position: sticky;
-  top:0;
-  
-   /* 高さが変わらないよう改行させない */
-  white-space: nowrap;
+	
+	position: sticky;
+	top:0;
+	z-index:0;
+	 /* 高さが変わらないよう改行させない */
+	white-space: nowrap;
  
 }
 
-.sticky_table_wrapper {
-  overflow-y: auto;
-  width: 68em;
-  height:300px;
-  
+#header{
+	
+	position:sticky;
+	top: -1px;
+	z-index:1;
 }
 
+
 .ID{
-	width:2em;
+	width:3em;
 }
 
 .time{
@@ -55,9 +57,16 @@ th{
 }
 
 .message{
-	width:20em;
+	width:15em;
 }
 
 .message_h{
-	width:6em;
+	width:10em;
 }
+
+
+
+
+
+
+

@@ -5,10 +5,15 @@ import java.sql.Timestamp;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+
+
+
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.text.ParseException;   
 
@@ -30,6 +35,8 @@ public class MessageMemoController {
 	@Autowired
 	private MessageRepository rep;
 	
+	@Autowired	
+	private HistoryRepository historyRepository;
 	
 	
 	
@@ -50,6 +57,21 @@ public class MessageMemoController {
 		return "inputForm.html";
         
     }
+	
+	
+	//msgmemo/history(history.htmlが呼ばれた時の処理)
+	@GetMapping(path="/msgmemo/history")
+	public String history(Model model) {
+		// M_CUSTOMERテーブルの全データを取得
+		ArrayList<History> historyList = historyRepository.histories();
+		
+		// モデルに属性追加
+		model.addAttribute("historylist",historyList);
+
+		// データ一覧画面を表示
+		return "history.html";
+		
+	}
 	
 	//POSTの処理を行うプログラムの入り口。統合の役割を果たし、新しいデータを登録する
 	//伝言メモ登録処理

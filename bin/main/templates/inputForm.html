@@ -160,7 +160,7 @@
                         </div>
                     </div>
                     <div class="text-center" >
-                        <select name="customer_cd" style="width: 530px">
+                        <select name="customer_cd" style="width: 30%;">
                         		<option value=""></option>	
                         	   	<option th:each="customer : ${customerlist}" th:object="${customer}" th:value = "*{c_num}" id="td_name" th:text="*{c_name}"></option>
                         </select>
@@ -176,7 +176,7 @@
                         </div>
                     </div>
                     <div class="text-center">
-                        <input type="text" name="sender" id="company_name" size="70"  required="required" maxlength="40">
+                        <input type="text" name="sender" id="company_name" size="70"  required="required" maxlength="40" style="width: 30%;">
                     </div>
                 </div>
                 
@@ -187,40 +187,36 @@
                         </div>
                     </div>
                 </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-9 ml-auto">
-                            <div id ="ckbox">
-                                <ul class="list-unstyled">
-                                    <li>
-                                        <input type="checkbox" name="message_cd" class="mb-3" id="check1" value="1">
-                                       	もう一度お電話します
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" name="message_cd" class="mb-3" id="check2" value="2">
-                                       	 折り返しお願いします
-                                    </li>
-                                    <li class="mr-xl-5">
-                                        <input type="checkbox"  name="message_cd" class="mb-3" id="check3" value="3">
-                                       	 伝言あります
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                <div class="container" style="width: 30%;">
+                      <div id ="ckbox">
+                          <ul class="list-unstyled">
+                              <li>
+                                  <input type="checkbox" name="message_cd" class="mb-3" id="check1" value="1">
+                                 	もう一度お電話します
+                              </li>
+                              <li>
+                                  <input type="checkbox" name="message_cd" class="mb-3" id="check2" value="2">
+                                 	 折り返しお願いします
+                              </li>
+                              <li class="mr-xl-5">
+                                  <input type="checkbox"  name="message_cd" class="mb-3" id="check3" value="3">
+                                 	 伝言あります
+                              </li>
+                          </ul>
+             			 </div>
                 </div>
                 <div class="text-center">
-                    <textarea readonly id="memo" name="memo" class="mb-3"  cols="70" rows="5" maxlength="256"></textarea>
+                    <textarea readonly id="memo" name="memo" class="mb-3"  cols="70" rows="5" maxlength="256" style="width: 30%"></textarea>
                 </div>
                     <div class="container">
                         <div class="row">
-                            <div class="col-10 ml-auto">
+                            <div class="col-10 ml-auto" >
                                 	受電者
                             </div>
                         </div>  
                     </div>
-                    <div class="text-center">
-                        <select name="receiver_cd" style="width: 530px;"  required="required">
+                    <div class="text-center" >
+                        <select name="receiver_cd" style="width: 30%;"  required="required">
 							<option value=""></option>
                         	<option th:each="employee : ${employeelist}" th:object="${employee}" th:value="*{e_num}" id="td_name" th:text="*{e_name}"></option>
                         </select>
